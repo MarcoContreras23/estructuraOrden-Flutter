@@ -14,8 +14,46 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child:Text("Hello", textDirection: TextDirection.ltr),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Estructura de orden'),
+          ),
+          body: Container(
+            child: Row(children: [
+              Expanded(
+                  child: Column(
+                children: [
+                  const Icon(Icons.call, size: 50),
+                  Container(
+                    height: 50,
+                    child: const Text('CALL'),
+                  ),
+                ],
+              )),
+              Expanded(
+                  child: Column(
+                children: [
+                  const Icon(Icons.route, size: 50),
+                  Container(
+                    height: 50,
+                    child: const Text('ROUTE'),
+                  ),
+                ],
+              )),Expanded(
+                  child: Column(
+                children: [
+                  const Icon(Icons.share, size: 50),
+                  Container(
+                    height: 50,
+                    child: const Text('SHARE'),
+                  ),
+                ],
+              )),
+
+            ]),
+          )),
     );
   }
 }
